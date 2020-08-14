@@ -17,7 +17,7 @@ speechSynthesis.addEventListener("voiceschanged",function(){
 
 voicesDropdown.addEventListener('change', function(){
      msg.voice = voices.find(voice => voice.name === this.value);
-     toggle();
+     toggle(false);
 });
 
 options.forEach(options => options.addEventListener('change', function(){
