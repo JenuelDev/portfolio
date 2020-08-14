@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Jenuel Ganawed - Text to Speech</title>
+     <link rel="shortcut icon" href="./asset/myface.ico" type="image/x-icon">
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+     <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+     
+     <div class="card my-box" style="margin-bottom: 30px;">
+          <div class="card-body">
+               <h2>Text to Speech</h2>
+               <div class="alert alert-success" role="alert">
+                    <p>Aww yeah, check this simple text to speech cycle using speechSytnthesis in Vanila JS, Hope you Like iT ❤❤.</p>
+                  </div>
+               <div>
+                    <label for="text">Write Message Here</label>
+                    <textarea class="form-control" name="text" id="text" cols="30" rows="3">Hi! I Love java script 👍.</textarea>
+               </div>
+               <div class="form-group">
+                    <label for="voices">Select a Voice Charancter 👱‍♂️👸</label>
+                    <select class="form-control" name="voices" id="voices"></select>
+               </div>
+               <div class="form-group">
+                    <label for="formControlRate">Set Rate</label>
+                    <input class="form-control-range" type="range" name="rate" min="0" max="5" value="1" step="0.1" id="formControlRate">
+               </div>
+               <div class="form-group">
+                    <label for="formControlPitch">Set Pitch</label>
+                    <input type="range" class="form-control-range" name="pitch" min="0" max="2" step="0.1" id="formControlPitch">
+               </div>
+               <div>
+                    <button class="btn btn-primary" id="speak">Speak!</button>
+                    <button class="btn btn-default" id="stop">Stop!</button>
+               </div>
+          </div>
+     </div>
+     <footer class="footer">
+          <div class="container">
+               <div>
+                    <div style="text-align:center; font-size: 12px; padding: 10px;">
+                         Hi! I am <i>Jenuel Oras Ganawed</i> , I made this using vanilla JS's own library called speechSytnthesis. You can check about me 👉👉<a href="http://jenuelganawed.ml">CLICK ME</a>
+                    </div>
+               </div>
+          </div>
+     </footer>
+</body>
+<script src="./js/index.js"></script></html>
