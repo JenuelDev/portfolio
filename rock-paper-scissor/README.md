@@ -1,4 +1,5 @@
-# rock-paper-scissor
+# Rock Paper Scissor
+this is a game of Rock paper scissor using VUeJS.
 
 ## Project setup
 ```
