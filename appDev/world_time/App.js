@@ -24,22 +24,22 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <>
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options ={{ header: () => {}}}
-        />
-        <Stack.Screen
-          name="Locations"
-          component={Location}
-          options={{
-            title: 'Find Locations'
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{ header: () => { } }}
+          />
+          <Stack.Screen
+            name="Locations"
+            component={Location}
+            options={{
+              title: 'Find Locations'
+            }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
     </>
   );
 };

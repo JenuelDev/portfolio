@@ -1,14 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import moment from 'moment';
-import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator, BackHandler, Alert } from 'react-native';
 import { FlatList, TouchableOpacity, TextInput } from 'react-native-gesture-handler';
 import locationData from './data/LocationData';
 import { api } from './data/api'
 
-const Locations = ({navigation}) => {
+const Locations = ({ navigation }) => {
 
      const [locations, setLocations] = useState([]);
      const [loading, setLoading] = useState(false);
+
+     useEffect(() => {
+          const backAction = () => {
+               navigation.navigate('Home');
+               return true;
+          };
+
+          const backHandler = BackHandler.addEventListener(
+               "hardwareBackPress",
+               backAction
+          );
+
+          return () => backHandler.remove();
+     }, []);
 
      const getTime = async (location) => {
           setLoading(true);
@@ -18,15 +32,15 @@ const Locations = ({navigation}) => {
                );
 
                let json = await response.json();
-               
+
                let isDay = moment()
-               .utcOffset(json.utc_offset)
-               .format('a');
+                    .utcOffset(json.utc_offset)
+                    .format('a');
 
                navigation.push('Home', {
                     location: location,
                     utc_offset: json.utc_offset,
-                    isDay: isDay === 'am' ? true:false
+                    isDay: isDay === 'am' ? true : false
                });
           } catch (error) {
                console.error(error);
@@ -58,7 +72,7 @@ const Locations = ({navigation}) => {
      return (
           <>
                <TextInput style={styles.input} onChangeText={(value) => searchItems(value)} placeholder="search to show items..." />
-               <View style={loading ? styles.loading : {position: 'absolute'}}>
+               <View style={loading ? styles.loading : { position: 'absolute' }}>
                     <ActivityIndicator size="large" color="white" animating={loading} />
                </View>
                <FlatList

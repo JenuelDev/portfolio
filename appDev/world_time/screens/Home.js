@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import { StyleSheet, Text, View, Image, Alert  } from 'react-native';
+import { StyleSheet, Text, View, Image, Alert, BackHandler } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import DateTime from './../components/DateTime';
@@ -13,24 +13,40 @@ class Home extends Component {
                utc_offset: false,
                location: 'Your Location'
           };
-         
      }
 
+     backAction = () => {
+          Alert.alert("Oops!", "Are you sure you want to Exit?", [
+               {
+                    text: "Cancel",
+                    onPress: () => null,
+                    style: "cancel"
+               },
+               { text: "YES", onPress: () => BackHandler.exitApp() }
+          ]);
+          return true;
+     };
+
+
      componentDidMount() {
-          if(this.props.route.params){
-               
+          if (this.props.route.params) {
                this.setState({
                     isDay: this.props.route.params.isDay,
                     utc_offset: this.props.route.params.utc_offset,
                     location: this.props.route.params.location
-                    
+
                });
                this.storeDate();
-          }else{
+          } else {
                let day = moment().format('a') == 'am' ? true : false;
-               this.setState({isDay: day});
-               this.retrieveData();
+               this.setState({ isDay: day });
+               const isDay = AsyncStorage.getItem('@isDay');
+               if (isDay) {
+                    this.retrieveData();
+               }
           }
+
+          BackHandler.addEventListener("hardwareBackPress", this.backAction);
      }
 
      storeDate = async () => {
@@ -63,11 +79,11 @@ class Home extends Component {
 
      render() {
           return (
-               <View style={[styles.container, { backgroundColor: this.state.isDay ? 'white' : 'black'}]}>
+               <View style={[styles.container, { backgroundColor: this.state.isDay ? 'white' : 'black' }]}>
                     <View style={{ alignItems: 'center' }}>
                          <Image
                               style={{ height: 100, width: 100 }}
-                              source={ this.state.isDay ? require('./../assets/day.png') : require('./../assets/night.png')}
+                              source={this.state.isDay ? require('./../assets/day.png') : require('./../assets/night.png')}
                          />
                          <Text
                               style={{
@@ -76,15 +92,15 @@ class Home extends Component {
                          >
                               {this.state.location}
                          </Text>
-                         <DateTime 
+                         <DateTime
                               utfOffset={this.state.utc_offset}
-                              isDay={this.state.isDay} 
+                              isDay={this.state.isDay}
                          />
                     </View>
-                    <View style={{marginTop: 20}} >
+                    <View style={{ marginTop: 20 }} >
                          <TouchableOpacity
                               style={styles.chooseTimeZone}
-                              onPress={() => { this.props.navigation.push('Locations') }}
+                              onPress={() => { this.props.navigation.push('Locations'),{reset: true}}}
                          >
                               <Text>
                                    🕓 Choose Time Zone
