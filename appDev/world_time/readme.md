@@ -9,7 +9,7 @@ Hi! I made a simple app that fetches data from the api, using stack navigation, 
 <!-- https://drive.google.com/uc?id=1kc7EE7naz9Rpvq8kyJhJ4F_eB96tnEi5&export=download -->
 
 ## Note
-- Running The App Nets Internet Connections.
+- Running The App Needs Internet Connections.
 
 # Details
 The app has 2 pages mainly the homescreen where is displays the Time of the selected location. If the time is pm the background changes to night/dark color. if its day it will turn to a white background.
