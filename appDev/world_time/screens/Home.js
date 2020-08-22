@@ -41,7 +41,7 @@ class Home extends Component {
                let day = moment().format('a') == 'am' ? true : false;
                this.setState({ isDay: day });
                const isDay = AsyncStorage.getItem('@isDay');
-               if (isDay) {
+               if (isDay !== null) {
                     this.retrieveData();
                }
           }
