@@ -1,0 +1,41 @@
+.profile-container {
+     margin-top: 10px;
+     margin-right: 100px;
+     margin-left: 100px;
+     display: flex !important;
+     flex-direction: row;
+
+     .profile-box {
+          width: 30%;
+          margin: 10px;
+          
+
+          .profile-card {
+               float: right;
+               max-width: 350px;
+               padding: 20px;
+
+               .profile-image img {
+                    width: 90%;
+                    border-radius: 100%;
+                    margin-bottom: 10px;
+               }
+
+               .profile-links span {
+                    display: block;
+                    font-size: 12px;
+                    margin-bottom: 5px;
+               }
+          }
+     }
+
+     .info-box {
+          width: 70%;
+          max-width: 1500px;
+          margin: 10px;
+
+          .info-box-page-view {
+               margin: 10px 0px 0px 0px;
+          }
+     }
+}
