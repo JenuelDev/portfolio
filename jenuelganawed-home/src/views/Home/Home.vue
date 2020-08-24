@@ -16,7 +16,7 @@
             </v-card-text>
             <div class="profile-links">
               <span v-for="(link, index) in links" :key="index">
-                <v-icon class="icons" small :color="link.icon_color">{{ link.icon }}</v-icon> 
+                <v-icon class="icons" small :color="link.icon_color" style="display: inline;">{{ link.icon }}</v-icon>
                 <a 
                 :href="link.link" 
                 target="_blank"

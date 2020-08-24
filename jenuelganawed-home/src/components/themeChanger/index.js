@@ -1,7 +1,11 @@
+import { mdiWeatherSunny, mdiWeatherNight } from '@mdi/js'
+
 export default {
      data() {
           return {
                showButton: this.$vuetify.theme.dark,
+               mdiWeatherSunny: mdiWeatherSunny,
+               mdiWeatherNight: mdiWeatherNight
           }
      },
      methods:{

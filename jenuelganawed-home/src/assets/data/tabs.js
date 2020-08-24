@@ -1,17 +1,18 @@
+import { mdiMonitorDashboard, mdiBlogger, mdiNotebookCheckOutline } from '@mdi/js'
 export const tabs = [
      {
           path: "/",
-          icon: "mdi-notebook-check-outline",
+          icon: mdiNotebookCheckOutline,
           text: "Overview"
      },
      {
           path: "portfolio",
-          icon: "mdi-monitor-dashboard",
+          icon: mdiMonitorDashboard,
           text: "Portfolio"
      },
      {
           path: "/blog",
-          icon: "mdi-blogger",
+          icon: mdiBlogger,
           text: "Blog"
      }
 ];

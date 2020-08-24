@@ -1,9 +1,13 @@
+import {} from '@mdi/js'
+import { mdiSchoolOutline } from '@mdi/js';
+import { mdiHeadLightbulbOutline } from '@mdi/js';
+
 export default {
      onjective: "To gain employment in any company, which will inspire me to enhance my skills in Software Development and work with the team in a positive atmosphere, welcoming challenging projects and enjoying working with all sorts of personalities.",
      overviews: [
           {
                h2: "Education",
-               icon: "mdi-school-outline",
+               icon: mdiSchoolOutline,
                sub: [
                     {
                          h3: "ings College of The Philippines (College Graduate)",
@@ -21,7 +25,7 @@ export default {
           },
           {
                h2: "Experience",
-               icon: "mdi-head-lightbulb-outline",
+               icon: mdiHeadLightbulbOutline,
                sub: [
                     {
                          h3: "Utalk - Software Developer",
