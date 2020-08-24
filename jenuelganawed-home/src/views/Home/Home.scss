@@ -1,7 +1,7 @@
 .profile-container {
      margin-top: 10px;
-     margin-right: 100px;
-     margin-left: 100px;
+     margin-right: 70px;
+     margin-left: 70px;
      display: flex !important;
      flex-direction: row;
 
@@ -23,8 +23,19 @@
 
                .profile-links span {
                     display: block;
-                    font-size: 12px;
+                    font-size: 14px;
                     margin-bottom: 5px;
+
+                    .icons {
+                         margin-right: 10px;
+                    }
+
+                    a{
+                         text-decoration: none;
+                         &:hover{
+                              text-decoration-line: underline;
+                         }
+                    }
                }
           }
      }
