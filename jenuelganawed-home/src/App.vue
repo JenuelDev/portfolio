@@ -1,8 +1,11 @@
 <template>
-  <v-app>
+  <div :vs-theme="$vuetify.theme.dark ? 'dark' :'light'">
+    <v-app>
     <ThemeChanger />
     <router-view></router-view>
   </v-app>
+  </div>
+  
 </template>
 
 <script>
@@ -20,7 +23,7 @@ export default {
     }
   },
   data: () => ({
-    //
+
   }),
 };
 </script>

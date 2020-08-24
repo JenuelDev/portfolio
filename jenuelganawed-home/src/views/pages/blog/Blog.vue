@@ -1,6 +1,6 @@
 <template>
      <div>
-          <UnderContruction />
+          <UnderContruction pageName="Blog"/>
      </div>
 </template>
 <script>

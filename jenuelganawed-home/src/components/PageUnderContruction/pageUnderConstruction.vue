@@ -1,9 +1,17 @@
 <template>
   <div class="under-contruction">
     <v-icon class="icon">mdi-hand-peace</v-icon>
-    <h3>Im Sorry Page is Under Contruction</h3>
+    <h3>Im Sorry {{pageName}} Page is Under Contruction</h3>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    pageName: {type: String}
+  }
+}
+</script>
 
 <style lang="scss">
 .under-contruction {
