@@ -6,7 +6,7 @@
           <div>
             <v-card-text style="text-align:center;">
               <div class="profile-image">
-                <img src="./../../assets/31676163.png" />
+                <img src="./../../assets/profile.jpg" />
               </div>
               <v-list-item-title class="headline mb-1 profile-name">{{name}}</v-list-item-title>
               <v-list-item-title class="headline mb-1 profile-username">{{username}}</v-list-item-title>
