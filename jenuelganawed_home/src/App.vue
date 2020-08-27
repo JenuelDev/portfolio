@@ -2,7 +2,9 @@
   <div :vs-theme="$vuetify.theme.dark ? 'dark' :'light'">
     <v-app>
     <ThemeChanger />
-    <router-view></router-view>
+    <vue-page-transition name="fade-in-right">
+      <router-view/>
+    </vue-page-transition>
   </v-app>
   </div>
   

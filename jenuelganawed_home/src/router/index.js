@@ -13,19 +13,19 @@ Vue.use(VueRouter)
       {
         path: '',
         name: 'overview',
-        component: () => import('./../views/pages/overview/Overview.vue')
+        component: () => import('./../views/Home/pages/overview/Overview.vue')
       },
       {
         path: 'portfolio',
         name: 'Portfolio',
-        component: () => import('./../views/pages/Portfolio/Portfolio.vue')
+        component: () => import('./../views/Home/pages/Portfolio/Portfolio.vue')
       },
-      {
-        path: 'blog',
-        name: 'Blog',
-        component: () => import('./../views/pages/blog/Blog.vue')
-      }
     ]
+  },
+  {
+    path: '/blog',
+    name: 'Blog',
+    component: () => import('./../views/blog/Blog.vue')
   },
   {
     path: '*',
@@ -35,6 +35,22 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes
+});
+
+router.beforeResolve((to, from, next) => {
+  // If this isn't an initial page load.
+  if (to.name) {
+      // Start the route progress bar.
+      // NProgress.start()
+      console.log('to: ' + to + " from: "+from);
+  }
+  next()
+})
+
+router.afterEach((to, from) => {
+  // Complete the animation of the route progress bar.
+  // NProgress.done()
+  console.log('Im done loading to: '+to + ' From: '+ from);
 })
 
 export default router

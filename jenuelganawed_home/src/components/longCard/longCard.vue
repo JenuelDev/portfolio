@@ -1,0 +1,129 @@
+<template>
+  <div class="long-card-container" @click="goToLibk(link)">
+    <div class="card">
+      <div class="con-img">
+        <slot name="image"></slot>
+        <!-- 
+          the slots should have something like this
+          <img src="./../../../../assets/logo.png" alt />
+          <img class="blur" src="./../../../../assets/logo.png" alt /> -->
+      </div>
+      <div class="con-text">
+        
+        <h2> <v-icon>{{icon}}</v-icon> {{title}}</h2>
+        <Lang :usedLang="lang" />
+        <div class="con-content">
+            <!-- ang slot na ito ahy pwedi element text or anything -->
+             <slot name="content"></slot>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import Lang from './lang/lang.vue'
+export default {
+    components: {
+      Lang
+    },
+     props: {
+          title: { type: String, default: 'No Title'},
+          icon: { type: String, default: ''},
+          link: { type: String, default: '#'},
+          lang: { type: Array}
+     },
+     data() {
+          return {
+               
+          }
+     },
+     methods: {
+       goToLibk(link){
+         window.open(link,'_blank');
+       }
+     }
+}
+</script>
+<style lang="scss">
+.long-card-container {
+
+  .card {
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    margin: 20px 0px 0px 0px;
+    transition: all 0.25s ease;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    padding: 10px;
+
+    .con-img {
+      margin: 0px 10px;
+      margin-top: -20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.35s ease-out;
+    }
+
+    .con-text {
+      padding: 10px;
+      opacity: 0.6;
+      // transition: 0.2s;
+      .lang-used{
+        // float: right;
+        .lang-color{
+          height: 10px;
+          width: 10px;
+          background: red;
+        }
+      }
+      .con-content {
+        opacity: 0.8;
+        margin-top: 10px;
+        // transition: 0.2s;
+      }
+    }
+    
+
+    img {
+      height: 120px;
+      opacity: 0.6;
+      transition: 0.2s;
+    }
+
+    img.blur {
+      position: absolute;
+      filter: blur(15px);
+      z-index: -1;
+      opacity: 0;
+      transform: scale(0.85);
+      transition: 0.1s;
+    }
+    &:hover {
+      transform: translate(0, -10px);
+      box-shadow: 0px 17px 35px 0px rgba(0, 0, 0, 0.438);
+      .con-text {
+        padding: 10px;
+        opacity: 1;
+        .con-content {
+          opacity: 1;
+          margin-top: 10px;
+          transition: 0.2s;
+        }
+      }
+      img {
+        height: 120px;
+        opacity: 1;
+      }
+    }
+    &:hover .con-img {
+      transform: translate(0, -15px);
+    }
+    &:hover .con-img img.blur {
+      opacity: 0.55;
+      transform: translate(-10px, 26px) scale(0.85);
+    }
+  }
+}
+</style>

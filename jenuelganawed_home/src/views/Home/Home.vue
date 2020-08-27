@@ -35,7 +35,9 @@
         </v-tabs>
         <div class="info-box-page-view">
           <v-card class="page" :loading="false" :disabled="false">
-            <router-view></router-view>
+            <vue-page-transition name="fade-in-right">
+              <router-view></router-view>
+            </vue-page-transition>
           </v-card>
         </div>
       </div>
