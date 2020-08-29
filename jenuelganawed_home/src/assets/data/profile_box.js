@@ -1,8 +1,11 @@
-import { mdiMapMarkerCircle, mdiGmail, mdiLink, mdiTwitter, mdiLinkedin, mdiGithub } from '@mdi/js'
+import { mdiMapMarkerCircle, mdiGmail, mdiLink, mdiTwitter, mdiLinkedin, mdiGithub } from '@mdi/js';
 
 export const name = "Jenuel Ganawed";
 export const username = "MisterJ";
-export const about = "Hi! I live in Baguio Luzon, Philippines. I am a programmer. I eat rice and pay bills HiHi 👌😁👍😎";
+export const address = "La Trinidad 2601";
+export const phone = "0950-3255-547";
+export const email = "Jenuel Oras Ganawed";
+export const about = "Hi! I live in La Trinidad, Benguet, Luzon, Philippines. I am a Web Developer. I eat rice and pay bills HiHi 👌😁👍😎";
 export const links = [
      {
           icon: mdiMapMarkerCircle,
@@ -41,3 +44,14 @@ export const links = [
           icon_color: ""
      }
 ];
+
+
+export const ME = {
+     name: name,
+     username: username,
+     address: address,
+     phone: phone,
+     email: email,
+     about: about,
+     links: links
+};

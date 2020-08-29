@@ -2,8 +2,12 @@ import OverviewData from '../../../../assets/data/overviewdata';
 import { mdiGold } from '@mdi/js';
 import { mdiHandPointingRight } from '@mdi/js';
 import { mdiCalendarMonth } from '@mdi/js';
+import Chip from './../../../../components/chips/chips.vue';
 
 export default {
+     components: {
+          Chip
+     },
      data() {
           return {
                overviewdata: OverviewData,

@@ -1,37 +1,64 @@
-import {} from '@mdi/js'
+import { mdiWordpress, mdiDatabase, mdiLanguageHtml5, mdiAngularjs, mdiVuejs, mdiLanguageRubyOnRails, mdiLaravel, mdiBrain } from '@mdi/js'
 import { mdiSchoolOutline } from '@mdi/js';
 import { mdiHeadLightbulbOutline } from '@mdi/js';
+import { vue, angular, mysql, wordpress, ruby, laravel, php } from './colorCodes.js';
+
+export const skills = [
+     {
+          text: "Wordpress",
+          color: wordpress,
+          icon: mdiWordpress
+     },
+     {
+          text: "MySQL",
+          color: mysql,
+          icon: mdiDatabase
+     },
+     {
+          text: "HTML|CSS|JAVASCRIPT",
+          color: "red darken-1",
+          icon: mdiLanguageHtml5
+     },
+     {
+          text: "Angular JS",
+          color: angular,
+          icon: mdiAngularjs
+     },
+     {
+          text: "Vue JS",
+          color: vue,
+          icon: mdiVuejs
+     },
+     {
+          text: "Ruby On Rails",
+          color: ruby,
+          icon: mdiLanguageRubyOnRails
+     },
+     {
+          text: "Lumen/Laravel",
+          color: laravel,
+          icon: mdiLaravel
+     },
+     {
+          text: "PHP",
+          color: php,
+          icon: ''
+     }
+];
 
 export default {
-     onjective: "To gain employment in any company, which will inspire me to enhance my skills in Software Development and work with the team in a positive atmosphere, welcoming challenging projects and enjoying working with all sorts of personalities.",
+     onjective: "I'm a Web Developer offering enthusiasm and understanding of various programming languages. Looking to join an industry where the opportunity for growth and professional development is embraced which will inspire me to enhance my skills in Software Development and work with the team in a positive atmosphere, welcoming challenging projects and enjoying working with all sorts of personalities.",
      overviews: [
-          {
-               h2: "Education",
-               icon: mdiSchoolOutline,
-               sub: [
-                    {
-                         h3: "Kings College of The Philippines (College Graduate)",
-                         date: "BS in Information Technology Major in Web Technology School Year 2016 to 2019",
-                         content: "I took the Bachelor of Science in Information Technology as my course, were I learned how to code using languages such us java, JavaScript, MySQL,PHP and frameworks like bootstrap, wordpress, etc. I took the major for Web Technology.",
-                         others: ""
-                    },
-                    {
-                         h3: "Cordillera Career Deveopment College (High School Graduate)",
-                         date: "School Year 2012 to 2015",
-                         content: "I enrolled as an High School Student in CCDC where I were actively partipated in events and programs.",
-                         others: ""
-                    }
-               ]
-          },
+          
           {
                h2: "Experience",
                icon: mdiHeadLightbulbOutline,
                sub: [
                     {
-                         h3: "Utalk - Software Developer",
+                         h3: "UTalk Philippines - Software Developer",
                          current: true,
                          date: "Year 2019 to Current Date",
-                         content: "I work as a Full-time software developer in this company.",
+                         content: "I work as a full-time software developer in this company. I was able to work on different frameworks and tools like VueJS, AngularJS, CodeIgniter, Lumen, Ruby on Rails, MongoDB, MySQL, and WordPress.",
                          others: ""
                     },
                     {
@@ -41,13 +68,37 @@ export default {
                          others: ""
                     },
                     {
-                         h3: "ILearn Development Skills Academy - OJT",
+                         h3: "ILearn Development Skills Academy - OJT (Graphic Designer and Programmer)",
                          date: "Year 2018",
                          content: 'Creating web designs, mostly used is Bootstrap Framework. Helped in programming the back end and front end of system , Video Editing and Photoshop (Infographics, tarpaulins, images)',
                          others: ""
                     }
                ]
           },
+          {
+               h2: "Education",
+               icon: mdiSchoolOutline,
+               sub: [
+                    {
+                         h3: "Kings College of The Philippines - BS in Information Tech.",
+                         date: "Year 2016 to 2019",
+                         content: "I took the Bachelor of Science in Information Technology as my course, were I learned how to code using languages such us java, JavaScript, MySQL,PHP and frameworks like bootstrap, wordpress, etc. I took the major for Web Technology.",
+                         others: ""
+                    },
+                    {
+                         h3: "Cordillera Career Deveopment College (High School Graduate)",
+                         date: "School Year 2012 to 2014",
+                         content: "I enrolled as an High School Student in CCDC where I were actively partipated in events and programs.",
+                         others: ""
+                    }
+               ]
+          },
+          {
+               h2: "Skills",
+               icon: mdiBrain,
+               sub: null,
+               chips: skills
+          }
 
-     ]
+     ],
 };

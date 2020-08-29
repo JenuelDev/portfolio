@@ -6,8 +6,8 @@ import WorldTime from './../images/portfolio/worldtime.png';
 import { vue, html, css, js, react, reactNative } from './colorCodes.js';
 
 const ActionColor = {
-     view: '#673AB7',
-     download: '#3F51B5'
+     view: 'deep-purple',
+     download: 'indigo'
 };
 
 export default [

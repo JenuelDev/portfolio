@@ -161,7 +161,7 @@ export default {
         }
         .con-content{
           padding-top: 10px;
-          font-size: 14px;
+          font-size: 12px;
           opacity: 1;
         }
       }

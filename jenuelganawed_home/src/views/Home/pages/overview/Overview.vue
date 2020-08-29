@@ -1,7 +1,7 @@
 <template>
      <div class="pages">
           <v-card class="overview-cards">
-               <h2><v-icon :large="windowWidth <= 425 ? false :true" color="primary" class="icon">{{mdiGold}}</v-icon> Objective</h2>
+               <h2><v-icon :large="windowWidth <= 425 ? false :true" color="primary" class="icon">{{mdiGold}}</v-icon> Intro/Objective</h2>
                <div class="overview-cards-sub">
                     <p class="over-qoute" v-html="overviewdata.onjective"></p>
                </div>
@@ -19,14 +19,14 @@
                          <p class="overview-cards-sub-title-def"><v-icon :small="windowWidth <= 425 ? false :true" :x-small="windowWidth <= 425 ? true :false">{{mdiCalendarMonth}}</v-icon> {{ sub.date }}</p>
                          <div class="overview-cards-sub-content" v-html="sub.content + sub.others"></div>
                </div>
+               <Chip v-if="overview.chips" :chips="overview.chips"/>
           </v-card>
-          
      </div>
 </template>
 <script src="./index.js"></script>
 <style lang="scss">
      .overview-cards{
-          padding: 4px;
+          padding: 20px;
           margin-bottom: 10px;
 
           .overview-cards-sub{
@@ -54,6 +54,7 @@
 
      @media only screen and (max-width: 425px) {
                .overview-cards{
+                    padding: 5px;
                     h2 {
                          font-size: 20px !important;
                     }
