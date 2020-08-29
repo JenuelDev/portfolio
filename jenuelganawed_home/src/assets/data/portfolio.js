@@ -1,9 +1,14 @@
-import { mdiTextToSpeech, mdiSpeaker, mdiCalculator, mdiGoogleEarth, mdiDownload } from '@mdi/js'
+import { mdiTextToSpeech, mdiSpeaker, mdiCalculator, mdiGoogleEarth, mdiDownload, mdiEye } from '@mdi/js'
 import SpeechOnText from './../images/portfolio/speechtotext.png';
 import texttospeech from './../images/portfolio/texttospeech.png';
 import Calculator from './../../assets/images/portfolio/calculator.png';
 import WorldTime from './../images/portfolio/worldtime.png';
 import { vue, html, css, js, react, reactNative } from './colorCodes.js';
+
+const ActionColor = {
+     view: '#673AB7',
+     download: '#3F51B5'
+};
 
 export default [
      {
@@ -16,7 +21,14 @@ export default [
                {
                     text: "Download App",
                     icon: mdiDownload,
-                    link: "https://drive.google.com/file/d/1kc7EE7naz9Rpvq8kyJhJ4F_eB96tnEi5/view?usp=sharing"
+                    link: "https://drive.google.com/file/d/1kc7EE7naz9Rpvq8kyJhJ4F_eB96tnEi5/view?usp=sharing",
+                    color: ActionColor.download
+               },
+               {
+                    text: "View API's",
+                    icon: mdiEye,
+                    link: "http://worldtimeapi.org/",
+                    color: ActionColor.view
                }
           ],
           image: WorldTime,
@@ -37,6 +49,14 @@ export default [
           icon: mdiCalculator,
           content: "Calculator is one fascinating computer that is created during the early days. People Have been using it for computing a lot of stuff. Its been a useful tool for eveyone specially students and workers. So I created a simple calculator using Vue sincce I have been learning how to create and build using vuejs.",
           link: 'https://jenuelganawed-calculator-vue.netlify.app/',
+          actions: [
+               {
+                    text: "View Site",
+                    icon: mdiEye,
+                    link: "https://jenuelganawed-calculator-vue.netlify.app/",
+                    color: ActionColor.view
+               }
+          ],
           image: Calculator,
           langUsed: [
                {
@@ -52,6 +72,14 @@ export default [
           content: "This is a simple speech to text using HTML, CSS, and JS. I was fascinated with what javascrip can do so I made a simple, project to try and convert speech to text. And JavaScript has a library called Speech Recognition. 👍👍👍",
           image: SpeechOnText,
           link: 'https://jenuelganawed-speechtotext.netlify.app/',
+          actions: [
+               {
+                    text: "View Site",
+                    icon: mdiEye,
+                    link: 'https://jenuelganawed-speechtotext.netlify.app/',
+                    color: ActionColor.view
+               }
+          ],
           langUsed: [
                {
                     color: html,
@@ -74,6 +102,14 @@ export default [
           content: "This is a simple Text to Speech using HTML, CSS, and JS. I was fascinated with what javascrip can do so I made a simple, project to try and convert speech to text. And JavaScript has a library called Speech Recognition. 👍👍",
           image: texttospeech,
           link: 'https://jenuelganawed-texttospeach.netlify.app/',
+          actions: [
+               {
+                    text: "View Site",
+                    icon: mdiEye,
+                    link: 'https://jenuelganawed-texttospeach.netlify.app/',
+                    color: ActionColor.view
+               }
+          ],
           langUsed: [
                {
                     color: html,

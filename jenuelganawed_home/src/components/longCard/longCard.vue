@@ -17,6 +17,12 @@
         <div class="con-content">
           <!-- ang slot na ito ahy pwedi element text or anything -->
           <slot name="content"></slot>
+          <div>
+            <v-btn small rounded v-for="action in actions" :key="action.link" :color="action.color" style="margin: 5px;" @click="goToLink(action.link)">
+              <v-icon small style="margin-top: -3px; margin-right: 5px;">{{action.icon}}</v-icon>
+              {{action.text}}
+            </v-btn>
+          </div>
         </div>
       </div>
     </div>
@@ -33,12 +39,13 @@ export default {
     icon: { type: String, default: "" },
     link: { type: String, default: "#" },
     lang: { type: Array },
+    actions: { type: Array }
   },
   data() {
     return {};
   },
   methods: {
-    goToLibk(link) {
+    goToLink(link) {
       window.open(link, "_blank");
     },
   },
@@ -53,7 +60,6 @@ export default {
     margin: 20px 0px 0px 0px;
     transition: all 0.25s ease;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-    cursor: pointer;
     padding: 10px;
 
     .con-img {
