@@ -1,52 +1,51 @@
 <template>
-  <div class="long-card-container" @click="goToLibk(link)">
+  <div class="long-card-container">
     <div class="card">
       <div class="con-img">
         <slot name="image"></slot>
         <!-- 
           the slots should have something like this
           <img src="./../../../../assets/logo.png" alt />
-          <img class="blur" src="./../../../../assets/logo.png" alt /> -->
+        <img class="blur" src="./../../../../assets/logo.png" alt />-->
       </div>
       <div class="con-text">
-        
-        <h2> <v-icon>{{icon}}</v-icon> {{title}}</h2>
+        <h2>
+          <v-icon>{{icon}}</v-icon>
+          {{title}}
+        </h2>
         <Lang :usedLang="lang" />
         <div class="con-content">
-            <!-- ang slot na ito ahy pwedi element text or anything -->
-             <slot name="content"></slot>
+          <!-- ang slot na ito ahy pwedi element text or anything -->
+          <slot name="content"></slot>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import Lang from './lang/lang.vue'
+import Lang from "./lang/lang.vue";
 export default {
-    components: {
-      Lang
+  components: {
+    Lang,
+  },
+  props: {
+    title: { type: String, default: "No Title" },
+    icon: { type: String, default: "" },
+    link: { type: String, default: "#" },
+    lang: { type: Array },
+  },
+  data() {
+    return {};
+  },
+  methods: {
+    goToLibk(link) {
+      window.open(link, "_blank");
     },
-     props: {
-          title: { type: String, default: 'No Title'},
-          icon: { type: String, default: ''},
-          link: { type: String, default: '#'},
-          lang: { type: Array}
-     },
-     data() {
-          return {
-               
-          }
-     },
-     methods: {
-       goToLibk(link){
-         window.open(link,'_blank');
-       }
-     }
-}
+  },
+};
 </script>
 <style lang="scss">
 .long-card-container {
-
   .card {
     width: 100%;
     display: flex;
@@ -70,9 +69,9 @@ export default {
       padding: 10px;
       opacity: 0.6;
       // transition: 0.2s;
-      .lang-used{
+      .lang-used {
         // float: right;
-        .lang-color{
+        .lang-color {
           height: 10px;
           width: 10px;
           background: red;
@@ -84,7 +83,6 @@ export default {
         // transition: 0.2s;
       }
     }
-    
 
     img {
       height: 120px;
@@ -123,6 +121,68 @@ export default {
     &:hover .con-img img.blur {
       opacity: 0.55;
       transform: translate(-10px, 26px) scale(0.85);
+    }
+  }
+}
+
+@media only screen and (max-width: 542px) {
+  .long-card-container {
+    .card {
+      display: block;
+      margin: 20px 0px 0px 0px;
+      padding: 5px;
+      .con-img {
+        float: left;
+        margin-top: 0px;
+      }
+      img {
+        height: 70px;
+        opacity: 1;
+      }
+      img.blur {
+        position: absolute;
+        filter: blur(15px);
+        z-index: -1;
+        opacity: 0;
+        transform: scale(0.85);
+        transition: 0.1s;
+      }
+
+      .con-text {
+        opacity: 1;
+        h2 {
+          font-size: 18px;
+        }
+        .con-content{
+          padding-top: 10px;
+          font-size: 14px;
+          opacity: 1;
+        }
+      }
+      &:hover {
+        transform: translate(0, 0px);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+        .con-text {
+          padding: 10px;
+          opacity: 1;
+          .con-content {
+            opacity: 1;
+            margin-top: 10px;
+            transition: 0.2s;
+          }
+        }
+        img {
+          height: 70px;
+          opacity: 1;
+        }
+      }
+      &:hover .con-img {
+        transform: translate(0, 0px);
+      }
+      &:hover .con-img img.blur {
+        opacity: 0;
+        transform: translate(0px, 0px) scale(0);
+      }
     }
   }
 }

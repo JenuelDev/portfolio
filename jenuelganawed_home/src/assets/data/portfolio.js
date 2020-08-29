@@ -1,10 +1,36 @@
-import { mdiTextToSpeech, mdiSpeaker, mdiCalculator } from '@mdi/js'
+import { mdiTextToSpeech, mdiSpeaker, mdiCalculator, mdiGoogleEarth, mdiDownload } from '@mdi/js'
 import SpeechOnText from './../images/portfolio/speechtotext.png';
 import texttospeech from './../images/portfolio/texttospeech.png';
 import Calculator from './../../assets/images/portfolio/calculator.png';
-import { vue, html, css, js } from './colorCodes.js'
+import WorldTime from './../images/portfolio/worldtime.png';
+import { vue, html, css, js, react, reactNative } from './colorCodes.js';
 
 export default [
+     {
+          key: 4,
+          title: "World Time Using React Native",
+          icon: mdiGoogleEarth,
+          content: "World Time is a simple App that I made using React Native. I was able to fetch data from <a href='http://worldtimeapi.org/' target='_blank'>World Time API</a> and Used it in this app. I was able to build the app as an apk and you can check it by clicking the download button bellow.",
+          link: "https://drive.google.com/file/d/1kc7EE7naz9Rpvq8kyJhJ4F_eB96tnEi5/view?usp=sharing",
+          actions: [
+               {
+                    text: "Download App",
+                    icon: mdiDownload,
+                    link: "https://drive.google.com/file/d/1kc7EE7naz9Rpvq8kyJhJ4F_eB96tnEi5/view?usp=sharing"
+               }
+          ],
+          image: WorldTime,
+          langUsed: [
+               {
+                    color: react,
+                    text: 'React'
+               },
+               {
+                    color: reactNative,
+                    text: 'reactNative'
+               }
+          ]
+     },
      {
           key: 3,
           title: "Web Calculator",

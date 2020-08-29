@@ -9,7 +9,29 @@ export default {
                overviewdata: OverviewData,
                mdiGold: mdiGold,
                mdiHandPointingRight: mdiHandPointingRight,
-               mdiCalendarMonth: mdiCalendarMonth
+               mdiCalendarMonth: mdiCalendarMonth,
+               windowWidth: window.innerHeight,
           }
      },
+     watch: {
+          windowHeight(newHeight, oldHeight) {
+               console.log(`it changed to ${newHeight} from ${oldHeight}`);
+          }
+     },
+
+     mounted() {
+          this.$nextTick(() => {
+               window.addEventListener('resize', this.onResize);
+          })
+     },
+
+     beforeDestroy() {
+          window.removeEventListener('resize', this.onResize);
+     },
+
+     methods: {
+          onResize() {
+               this.windowWidth = window.innerWidth
+          }
+     }
 }

@@ -20,6 +20,7 @@ Vue.use(VueRouter)
         name: 'Portfolio',
         component: () => import('./../views/Home/pages/Portfolio/Portfolio.vue')
       },
+      
     ]
   },
   {
@@ -37,20 +38,20 @@ const router = new VueRouter({
   routes
 });
 
-router.beforeResolve((to, from, next) => {
-  // If this isn't an initial page load.
-  if (to.name) {
-      // Start the route progress bar.
-      // NProgress.start()
-      console.log('to: ' + to + " from: "+from);
-  }
-  next()
-})
+// router.beforeResolve((to, from, next) => {
+//   // If this isn't an initial page load.
+//   if (to.name) {
+//       // Start the route progress bar.
+//       // NProgress.start()
+//       console.log('to: ' + to + " from: "+from);
+//   }
+//   next()
+// })
 
-router.afterEach((to, from) => {
-  // Complete the animation of the route progress bar.
-  // NProgress.done()
-  console.log('Im done loading to: '+to + ' From: '+ from);
-})
+// router.afterEach((to, from) => {
+//   // Complete the animation of the route progress bar.
+//   // NProgress.done()
+//   // console.log('Im done loading to: '+to + ' From: '+ from);
+// })
 
 export default router

@@ -2,11 +2,11 @@
      margin-top: 10px;
      margin-right: 70px;
      margin-left: 70px;
-     display: flex !important;
+     display: flex;
      flex-direction: row;
 
      .profile-box {
-          width: 30%;
+          width: 25%;
           margin: 10px;
           
 
@@ -41,12 +41,51 @@
      }
 
      .info-box {
-          width: 70%;
-          max-width: 1500px;
+          width: 75%;
+          max-width: 1200px;
           margin: 10px;
 
           .info-box-page-view {
                margin: 10px 0px 0px 0px;
           }
+     }
+}
+.bottom-navigations{
+     display: none;
+}
+
+@media only screen and (max-width: 768px) {
+     .profile-container {
+          display: block;
+          margin-right: 30px;
+          margin-left: 30px;
+          .profile-box{
+               display: none;
+          }
+          
+          .info-box {
+               width: 100%;
+               margin: 10px;
+          }
+          .info-box {
+               width: 95%;
+               .tab-wide{
+                    display: none;
+               }
+          }
+     }
+     .bottom-navigations{
+          display: block;
+          margin-bottom: -3px;
+     }
+}
+
+@media only screen and (max-width: 768px) {
+     .profile-container {
+          margin-right: 0px;
+          margin-left: 0px;
+          margin-bottom: 70px;
+          margin-top: 20px;
+          
      }
 }

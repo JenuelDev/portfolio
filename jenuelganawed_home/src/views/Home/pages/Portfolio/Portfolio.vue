@@ -1,6 +1,6 @@
 <template>
      <div style="padding: 20px;">
-          <LongCard v-ripple v-for="data in datas" :key="data.key" :title="data.title" :icon="data.icon" :link="data.link" :lang="data.langUsed">
+          <LongCard v-for="data in datas" :key="data.key" :title="data.title" :icon="data.icon" :link="data.link" :lang="data.langUsed">
                <template v-slot:image>
                     <img :src="data.image" alt />
                     <img
@@ -15,5 +15,5 @@
           </LongCard>
      </div>
 </template>
-
 <script src="./index.js"></script>
+<style lang="scss" src="./index.scss"></style>

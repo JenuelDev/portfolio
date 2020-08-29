@@ -10,7 +10,7 @@ export default {
                icon: mdiSchoolOutline,
                sub: [
                     {
-                         h3: "ings College of The Philippines (College Graduate)",
+                         h3: "Kings College of The Philippines (College Graduate)",
                          date: "BS in Information Technology Major in Web Technology School Year 2016 to 2019",
                          content: "I took the Bachelor of Science in Information Technology as my course, were I learned how to code using languages such us java, JavaScript, MySQL,PHP and frameworks like bootstrap, wordpress, etc. I took the major for Web Technology.",
                          others: ""
