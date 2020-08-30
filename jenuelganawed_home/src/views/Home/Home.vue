@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    
+   
     <div class="profile-container">
       <div class="profile-box">
         <v-card class="mx-auto profile-card">
@@ -39,7 +39,8 @@
             {{tab.text}}
           </v-tab>
         </v-tabs>
-
+        <!-- tabs when scrolling down -->
+        <ShowTabsOnScroll />
         <div class="info-box-page-view">
           <v-card class="page" :loading="false" :disabled="false">
             <vue-page-transition name="fade-in-up">

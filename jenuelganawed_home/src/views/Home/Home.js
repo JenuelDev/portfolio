@@ -2,13 +2,13 @@
 import { name, username, about, links } from "./../../assets/data/profile_box.js";
 import { tabs } from './../../assets/data/tabs.js';
 import BottomNav from './../../components/bottomNavigation/bottomNavigation.vue';
-// import ProfileBox from './../../components/profileBox/profileInbox.vue';
+import ShowTabsOnScroll from './../../components/showTabsOnScroll/showTabsOnScroll.vue';
 
 export default {
      name: "Home",
      components: {
        BottomNav,
-      //  ProfileBox
+       ShowTabsOnScroll
      },
      data() {
        return {
