@@ -51,7 +51,7 @@ export default [
           link: 'https://jenuelganawed-calculator-vue.netlify.app/',
           actions: [
                {
-                    text: "View Site",
+                    text: "View Demo",
                     icon: mdiEye,
                     link: "https://jenuelganawed-calculator-vue.netlify.app/",
                     color: ActionColor.view
@@ -74,7 +74,7 @@ export default [
           link: 'https://jenuelganawed-speechtotext.netlify.app/',
           actions: [
                {
-                    text: "View Site",
+                    text: "View Demo",
                     icon: mdiEye,
                     link: 'https://jenuelganawed-speechtotext.netlify.app/',
                     color: ActionColor.view
@@ -104,7 +104,7 @@ export default [
           link: 'https://jenuelganawed-texttospeach.netlify.app/',
           actions: [
                {
-                    text: "View Site",
+                    text: "View Demo",
                     icon: mdiEye,
                     link: 'https://jenuelganawed-texttospeach.netlify.app/',
                     color: ActionColor.view
