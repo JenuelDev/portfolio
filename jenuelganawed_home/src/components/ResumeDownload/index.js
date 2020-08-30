@@ -4,7 +4,7 @@ export default {
      data() {
           return {
                showButton: this.$vuetify.theme.dark,
-               mdiWeatherSunny: mdiFileDownload,
+               iconLang: mdiFileDownload,
                windowWidth: window.innerWidth
           }
      },
