@@ -18,7 +18,7 @@
           <!-- ang slot na ito ahy pwedi element text or anything -->
           <slot name="content"></slot>
           <div>
-            <v-btn small rounded v-for="action in actions" :key="action.link" :color="action.color" style="margin: 5px;" @click="goToLink(action.link)">
+            <v-btn small rounded v-for="action in actions" :key="action.link" :color="action.color" style="margin: 5px; color: white;" @click="goToLink(action.link)">
               <v-icon small style="margin-top: -3px; margin-right: 5px;">{{action.icon}}</v-icon>
               {{action.text}}
             </v-btn>
@@ -73,7 +73,7 @@ export default {
 
     .con-text {
       padding: 10px;
-      opacity: 0.6;
+      opacity: 0.7;
       // transition: 0.2s;
       .lang-used {
         // float: right;
@@ -84,7 +84,6 @@ export default {
         }
       }
       .con-content {
-        opacity: 0.8;
         margin-top: 10px;
         // transition: 0.2s;
       }
@@ -92,7 +91,7 @@ export default {
 
     img {
       height: 120px;
-      opacity: 0.6;
+      opacity: 0.7;
       transition: 0.2s;
     }
 
@@ -105,14 +104,12 @@ export default {
       transition: 0.1s;
     }
     &:hover {
-      transform: translate(0, -10px);
-      box-shadow: 0px 17px 35px 0px rgba(0, 0, 0, 0.438);
+      transform: translate(0, -9px);
+      box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.438);
       .con-text {
         padding: 10px;
         opacity: 1;
         .con-content {
-          opacity: 1;
-          margin-top: 10px;
           transition: 0.2s;
         }
       }

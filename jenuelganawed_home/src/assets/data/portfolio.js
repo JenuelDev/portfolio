@@ -10,7 +10,7 @@ const ActionColor = {
      download: 'indigo'
 };
 
-export default [
+export const smallApps = [
      {
           key: 4,
           title: "World Time Using React Native",

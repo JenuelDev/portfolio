@@ -1,6 +1,6 @@
 <template>
      <div class="showOnScroll" :class="active ? 'showOnScroll-show':'showOnScroll-hide'" >
-          <v-tabs class="tab-wide" :background-color="$vuetify.theme.dark ? 'grey darken-2' : 'blue-grey darken-4'" dark centered>
+          <v-tabs class="tab-wide" :background-color="$vuetify.theme.dark ? '#121212' : 'grey lighten-5'" centered>
                <v-tab v-for="tab in tabs" :key="tab.text" :to="tab.path">
                     <v-icon style="margin-right: 5px;">{{tab.icon}}</v-icon>
                     {{tab.text}}
@@ -30,11 +30,10 @@ export default {
 <style lang="scss">
      .showOnScroll {
           position: fixed;
-          background: red;
           z-index: 5;
           top: 0;
           transition: 0.2s;
-          width: 65%;
+          width: 70%;
           max-width: 1200px;
      }
      .showOnScroll-hide{

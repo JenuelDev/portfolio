@@ -1,6 +1,6 @@
 import PageUnderContruction from "./../../../../components/PageUnderContruction/pageUnderConstruction.vue";
 import LongCard from "./../../../../components/longCard/longCard.vue";
-import Portfolio from "./../../../../assets/data/portfolio";
+import { smallApps } from "./../../../../assets/data/portfolio";
 
 export default {
      components: {
@@ -10,7 +10,7 @@ export default {
      data() {
           return {
                active: false,
-               datas: Portfolio
+               datas: smallApps
           }
      },
      methods: {
