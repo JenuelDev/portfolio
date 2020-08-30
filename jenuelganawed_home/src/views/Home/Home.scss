@@ -11,8 +11,7 @@
           
 
           .profile-card {
-               float: right;
-               max-width: 350px;
+               max-width: 330px;
                padding: 20px;
 
                .profile-image img {
@@ -52,6 +51,16 @@
 }
 .bottom-navigations{
      display: none;
+}
+
+@media only screen and (max-width: 1233px){
+     .profile-container {
+          .profile-box {
+               .profile-card {
+                    right: 72%;
+               }
+          }
+     }
 }
 
 @media only screen and (max-width: 768px) {
