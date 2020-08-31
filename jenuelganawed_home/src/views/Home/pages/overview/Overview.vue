@@ -39,6 +39,7 @@
                     padding: 5px;
                     border-radius: 10px;
                     margin-left: 10px;
+                    display: inline-block;
                }
 
                .overview-cards-sub-title-def{

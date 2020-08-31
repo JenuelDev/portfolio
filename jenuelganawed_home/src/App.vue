@@ -2,7 +2,7 @@
   <div :vs-theme="$vuetify.theme.dark ? 'dark' :'light'">
     <v-app>
       <div class="show-myprofile">
-      <ProfileBox />
+      <profileBoxToggleShow />
     </div>
     <ThemeChanger />
     <vue-page-transition name="fade-in-left">
@@ -15,13 +15,13 @@
 
 <script>
 import ThemeChanger from './components/themeChanger/ThemeChanger';
-import ProfileBox from './components/profileBox/profileInbox.vue';
+import profileBoxToggleShow from './components/profileBoxToggleShow/profileBoxToggleShow';
 
 export default {
   name: 'App',
   components: {
     ThemeChanger,
-    ProfileBox
+    profileBoxToggleShow
   },
   beforeCreate(){
     let themeSelected = localStorage.getItem('theme-select');
