@@ -1,4 +1,4 @@
-import { mdiMapMarkerCircle, mdiGmail, mdiLink, mdiTwitter, mdiLinkedin, mdiGithub, mdiFileDownload } from '@mdi/js';
+import { mdiMapMarkerCircle, mdiGmail, mdiLink, mdiTwitter, mdiLinkedin, mdiGithub, mdiFileDownload, mdiYoutube } from '@mdi/js';
 
 export const name = "Jenuel Ganawed";
 export const username = "Full Stack Web Developer";
@@ -18,6 +18,12 @@ export const links = [
           text: "jenuelganawed936@gmail.com",
           link: "http://jenuelganawed936@gmail.com",
           icon_color: "#c71610"
+     },
+     {
+          icon: mdiYoutube,
+          text: "Youtube Channel",
+          link: "https://www.youtube.com/channel/UCNANDtTF63UTRcYioVsSCdA",
+          icon_color: "red"
      },
      {
           icon: mdiLink,
