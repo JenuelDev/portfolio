@@ -74,6 +74,7 @@ export default {
     .con-text {
       padding: 10px;
       opacity: 0.7;
+      font-size: 15px;
       // transition: 0.2s;
       .lang-used {
         // float: right;

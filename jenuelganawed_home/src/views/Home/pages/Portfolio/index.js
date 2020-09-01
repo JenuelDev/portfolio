@@ -10,8 +10,14 @@ export default {
      data() {
           return {
                active: false,
-               datas: smallApps
+               datas: smallApps,
+               redered: false
           }
+     },
+     mounted() {
+          this.$nextTick(function () {
+               this.redered = !this.rendered;
+          })
      },
      methods: {
           goToSite(){
