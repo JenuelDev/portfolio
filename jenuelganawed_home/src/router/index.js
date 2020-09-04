@@ -1,7 +1,6 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home/Home.vue'
-import PageNotFound from './../components/PageNotFound/PageNotFound.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home/Home.vue';
 
 Vue.use(VueRouter)
 
@@ -12,13 +11,18 @@ Vue.use(VueRouter)
     children: [
       {
         path: '',
+        name: 'Introduction',
+        component: () => import(/* webpackChunkName: "introduction" */ './../views/Home/pages/introduction/introduction.vue')
+      },
+      {
+        path: 'overview',
         name: 'overview',
-        component: () => import('./../views/Home/pages/overview/Overview.vue')
+        component: () => import(/* webpackChunkName: "overview" */ './../views/Home/pages/overview/Overview.vue')
       },
       {
         path: 'portfolio',
         name: 'Portfolio',
-        component: () => import('./../views/Home/pages/Portfolio/Portfolio.vue')
+        component: () => import(/* webpackChunkName: "portfolio" */ './../views/Home/pages/Portfolio/Portfolio.vue')
       },
       
     ]
@@ -26,16 +30,23 @@ Vue.use(VueRouter)
   {
     path: '/blog',
     name: 'Blog',
-    component: () => import('./../views/blog/Blog.vue')
+    component: () => import(/* webpackChunkName: "blog" */ './../views/blog/Blog.vue')
   },
   {
     path: '*',
-    component: PageNotFound
+    component: () => import(/* webpackChunkName: "notfound" */ './../components/PageNotFound/PageNotFound.vue')
   }
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 });
 
 // router.beforeResolve((to, from, next) => {

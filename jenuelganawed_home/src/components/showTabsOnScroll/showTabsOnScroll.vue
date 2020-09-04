@@ -32,9 +32,8 @@ export default {
           position: fixed;
           z-index: 5;
           top: 0;
-          transition: 0.2s;
-          width: 70%;
-          max-width: 1200px;
+          transition: 0.5s;
+          width: 100%;
      }
      .showOnScroll-hide{
           margin-top: -200px;
@@ -42,7 +41,7 @@ export default {
      .showOnScroll-show{
           margin-top: 0px;
      }
-     @media only screen and (max-width: 768px) {
+     @media only screen and (max-width: 1197px) {
           .showOnScroll {
                display: none;
           }

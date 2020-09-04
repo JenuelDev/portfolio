@@ -1,5 +1,5 @@
 <template>
-     <div style="padding: 20px;">
+     <div class="pages">
           <v-skeleton-loader
                v-if="redered == false"
                class="mx-auto"

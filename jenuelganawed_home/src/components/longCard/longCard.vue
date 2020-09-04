@@ -1,6 +1,6 @@
 <template>
   <div class="long-card-container">
-    <div class="card">
+    <v-card class="card">
       <div class="con-img">
         <slot name="image"></slot>
         <!-- 
@@ -25,7 +25,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </v-card>
   </div>
 </template>
 <script>
@@ -56,8 +56,8 @@ export default {
   .card {
     width: 100%;
     display: flex;
-    border-radius: 10px;
-    margin: 20px 0px 0px 0px;
+    // border-radius: 10px;
+    margin: 15px 0px 0px 0px;
     transition: all 0.25s ease;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
     padding: 10px;

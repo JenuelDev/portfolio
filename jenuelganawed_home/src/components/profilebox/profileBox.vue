@@ -1,15 +1,17 @@
 <template>
-  <div class="profile-box" >
+  <div class="profile-box">
     <v-card class="mx-auto profile-card" :style="fullHeight ? 'height: 100vh;' : ''">
       <slot name="closeButton"></slot>
       <div>
-        <v-card-text style="text-align:center;">
-          <div class="profile-image">
+        <v-card-text>
+          <div class="profile-image" style="text-align:center;">
             <img src="./../../assets/profile.jpg" />
           </div>
-          <h3 class="headline mb-1 profile-name">{{name}}</h3>
-          <h2>{{username}}</h2>
-          <p class="profile-details">{{about}}</p>
+          <div style="text-align: left;">
+            <h3 class="headline mb-1 profile-name">{{name}}</h3>
+            <h2>{{username}}</h2>
+            <p class="profile-details">{{about}}</p>
+          </div>
         </v-card-text>
         <div class="profile-links">
           <span v-for="(link, index) in links" :key="index">
@@ -45,7 +47,7 @@ export default {
   name: "Home",
   props: {
     show: { type: Boolean, default: false },
-    fullHeight: { type: Boolean, default: false }
+    fullHeight: { type: Boolean, default: false },
   },
   data() {
     return {
@@ -75,33 +77,34 @@ export default {
 </script>
 <style lang="scss">
 .profile-box {
-          .profile-card {
-               min-width: 290px;
-               max-width: 330px;
-               padding: 20px 20px 80px 20px;
+  .profile-card {
+    min-width: 300px;
+    max-width: 330px;
+    padding: 20px 20px 80px 20px;
 
-               .profile-image img {
-                    width: 90%;
-                    border-radius: 100%;
-                    margin-bottom: 10px;
-               }
+    .profile-image img {
+      width: 90%;
+      border-radius: 100%;
+      margin-bottom: 10px;
+    }
 
-               .profile-links span {
-                    display: block;
-                    font-size: 14px;
-                    margin-bottom: 5px;
+    .profile-links span {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      padding-left: 7px;
 
-                    .icons {
-                         margin-right: 10px;
-                    }
+      .icons {
+        margin-right: 10px;
+      }
 
-                    a{
-                         text-decoration: none;
-                         &:hover{
-                              text-decoration-line: underline;
-                         }
-                    }
-               }
-          }
-     }
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration-line: underline;
+        }
+      }
+    }
+  }
+}
 </style>

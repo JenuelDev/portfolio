@@ -105,7 +105,7 @@ export default {
   transition: 0.3s;
   overflow: auto;
 }
-@media only screen and (max-width: 993px) {
+@media only screen and (max-width: 1197px) {
   .button-show-overlay {
     display: block !important;
   }

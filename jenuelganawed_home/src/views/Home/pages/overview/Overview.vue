@@ -1,7 +1,7 @@
 <template>
      <div class="pages">
           <v-card class="overview-cards">
-               <h2><v-icon :large="windowWidth <= 425 ? false :true" color="primary" class="icon">{{mdiGold}}</v-icon> Intro/Objective</h2>
+               <h2><v-icon :large="windowWidth <= 425 ? false :true" color="primary" class="icon" style="margin-top: -5px;">{{mdiGold}}</v-icon> Objective</h2>
                <div class="overview-cards-sub">
                     <p class="over-qoute" v-html="overviewdata.onjective"></p>
                </div>

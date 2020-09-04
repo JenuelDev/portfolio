@@ -1,5 +1,5 @@
 <template>
-     <div class="not-found-body">
+     <div class="not-found-body" style="margin-top: 50px;">
           <div class="not-found-body">
                <div class="scene">
                     <div class="box">
