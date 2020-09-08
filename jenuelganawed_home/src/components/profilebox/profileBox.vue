@@ -1,6 +1,6 @@
 <template>
   <div class="profile-box">
-    <v-card class="mx-auto profile-card" :style="fullHeight ? 'height: 100vh;' : ''">
+    <v-card class="mx-auto profile-card" :style="fullHeight ? 'height: 100vh;' : ''" elevation="0">
       <slot name="closeButton"></slot>
       <div>
         <v-card-text>

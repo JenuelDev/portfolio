@@ -1,13 +1,19 @@
 <template>
      <div class="lang-used" style="display: block">
-          <span v-for="(lang, index) in usedLang" :key="index" class="lang-shows">
-               <v-icon x-small style="margin-top: -3px;" :color="lang.color">{{circle}}</v-icon>
-               {{lang.text}}
-          </span>
+          <template v-for="(lang, index) in usedLang">
+               <span v-if="typeof lang == 'object'" :key="index"  class="lang-shows">
+                    <v-icon x-small style="margin-top: -3px;" :color="lang.color">{{circle}}</v-icon>
+                    {{lang.text}}
+               </span>
+               <span v-else :key="index">
+                    <v-icon x-small style="margin-top: -3px;">{{sharpIcon}}</v-icon>
+                    {{lang}}
+               </span>
+          </template>
      </div>
 </template>
 <script>
-import { mdiCheckboxBlankCircle } from '@mdi/js';
+import { mdiCheckboxBlankCircle, mdiMusicAccidentalSharp } from '@mdi/js';
 
 export default {
      props: {
@@ -15,7 +21,8 @@ export default {
      },
      data() {
           return {
-               circle: mdiCheckboxBlankCircle
+               circle: mdiCheckboxBlankCircle,
+               sharpIcon: mdiMusicAccidentalSharp
           }
      },
 }

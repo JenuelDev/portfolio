@@ -1,4 +1,4 @@
-import { mdiMapMarkerCircle, mdiGmail, mdiLink, mdiTwitter, mdiLinkedin, mdiGithub, mdiFileDownload, mdiYoutube } from '@mdi/js';
+import { mdiMapMarkerCircle, mdiGmail, mdiLink, mdiTwitter, mdiLinkedin, mdiGithub, mdiFileDownload, mdiYoutube, mdiDevTo } from '@mdi/js';
 import ProfileImage from './../profile.jpg';
 export const name = "Jenuel Ganawed";
 export const username = "Web Developer";
@@ -56,6 +56,13 @@ export const links = [
           icon_color: "",
           tooltip: "GitHub"
      },
+     // {
+     //      icon: mdiDevTo,
+     //      text: "DevProfile",
+     //      link: "https://dev.to/misterj936",
+     //      icon_color: "#01579B",
+     //      tooltip: "Dev Profile"
+     // },
      {
           icon: mdiFileDownload,
           text: "Download My Resume",

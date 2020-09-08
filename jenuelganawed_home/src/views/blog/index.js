@@ -1,19 +1,30 @@
 import UnderContruction from "./../../components/PageUnderContruction/pageUnderConstruction.vue";
 import BackButton from "./../../components/backButton/backButton.vue";
-// import {mapActions} from 'vuesax';
+import {getPOSTS} from './../../constants/request.js';
+import BlogItems from './components/blog-item/blogItem.vue';
+import { mdiBlogger } from '@mdi/js';
+
 export default {
      components:{
           UnderContruction,
-          BackButton
+          BackButton,
+          BlogItems
      },
      data() {
           return {
-               
+               blogItems: [],
+               blogIcon: mdiBlogger
           }
      },
      methods: {
-          // ...mapActions({
-          //      BLOG_GET: 'BLOG_GET'
-          // })
+     },
+     mounted() {
+          getPOSTS().then(result => {
+               this.blogItems = result.data.items;
+               console.log(result.data.items);
+          })
+          .catch(error => {
+               console.log(errpr);
+          });
      },
 }

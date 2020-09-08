@@ -39,7 +39,7 @@ export default {
     icon: { type: String, default: "" },
     link: { type: String, default: "#" },
     lang: { type: Array },
-    actions: { type: Array }
+    actions: { type: Array, default: null }
   },
   data() {
     return {};
@@ -63,12 +63,15 @@ export default {
     padding: 10px;
 
     .con-img {
+
       margin: 0px 10px;
       margin-top: -20px;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all 0.35s ease-out;
+      // width: 200px;
+      // overflow: hidden;
     }
 
     .con-text {
@@ -92,6 +95,7 @@ export default {
 
     img {
       height: 120px;
+      // width: 200px;
       opacity: 0.7;
       transition: 0.2s;
     }
