@@ -2,11 +2,11 @@ import OverviewData from '../../../../assets/data/overviewdata';
 import { mdiGold } from '@mdi/js';
 import { mdiHandPointingRight } from '@mdi/js';
 import { mdiCalendarMonth } from '@mdi/js';
-import Chip from './../../../../components/chips/chips.vue';
+import TimeLine from './../../../../components/timeline/timeline.vue';
 
 export default {
      components: {
-          Chip
+          TimeLine
      },
      data() {
           return {

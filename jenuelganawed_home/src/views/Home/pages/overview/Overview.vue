@@ -19,7 +19,7 @@
                          <p class="overview-cards-sub-title-def"><v-icon :small="windowWidth <= 425 ? false :true" :x-small="windowWidth <= 425 ? true :false">{{mdiCalendarMonth}}</v-icon> {{ sub.date }}</p>
                          <div class="overview-cards-sub-content" v-html="sub.content + sub.others"></div>
                </div>
-               <Chip v-if="overview.chips" :chips="overview.chips"/>
+               <TimeLine v-if="overview.chips" :items="overview.chips"/>
           </v-card>
      </div>
 </template>
