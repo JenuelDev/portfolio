@@ -1,22 +1,16 @@
 .blog-list-show {
      .post-module {
-
-          .modal-contents{
-               overflow: hidden;
-          }
-
           font-size: 14px;
           position: relative;
           z-index: 1;
           display: block;
-          // background: #ffffff;
           margin: 10px;
           max-width: 300px;
           min-width: 270px;
           height: 445px;
-          -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-          -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+          -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
           -webkit-transition: all 0.2s linear 0s;
           -moz-transition: all 0.2s linear 0s;
           -ms-transition: all 0.2s linear 0s;
@@ -24,7 +18,6 @@
           transition: all 0.2s linear 0s;
 
           .thumbnail {
-               // background: #000000;
                height: 300px;
                overflow: hidden;
 
@@ -40,7 +33,6 @@
                     -webkit-border-radius: 100%;
                     -moz-border-radius: 100%;
                     border-radius: 100%;
-                    // color: #ffffff;
                     font-weight: 700;
                     text-align: center;
                     -webkti-box-sizing: border-box;
@@ -74,7 +66,6 @@
           .post-content {
                position: absolute;
                bottom: 0;
-               // background: #ffffff;
                width: 100%;
                padding: 20px;
                -webkti-box-sizing: border-box;
@@ -90,23 +81,19 @@
                     position: absolute;
                     top: -34px;
                     left: 0;
-                    // background: #e74c3c;
                     padding: 10px 15px;
-                    // color: #ffffff;
                     font-size: 14px;
                     font-weight: 600;
                     text-transform: uppercase;
                }
 
                .title {
-                    // color: #333333;
                     font-size: 20px;
                     margin-top: -10px;
                }
 
                .sub_title {
                     padding: 0 0 20px;
-                    // color: #f16b5c;
                     font-size: 17px;
                     font-weight: 400;
                }
@@ -114,7 +101,6 @@
                .description {
                     overflow: hidden;
                     height: 0px;
-                    color: #b1b1b1;
                     font-size: 14px;
                     line-height: 1.8em;
                     transition: 0.3s;
@@ -122,22 +108,20 @@
 
                .post-meta {
                     margin: 30px 0 0;
-                    // color: #999999;
 
                     .timestamp {
                          margin: 0 16px 0 0;
                     }
                     a {
-                         // color: #999999;
                          text-decoration: none;
                     }
                }
           }
 
           &:hover{
-               -webkit-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
-               -moz-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
-               box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+               -webkit-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3) !important;
+               -moz-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3) !important;
+               box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3) !important;
 
                .thumbnail img {
                     -webkit-transform: scale(1.1);
@@ -154,8 +138,19 @@
      }
 }
 
+.modal-contents{
+     overflow: hidden;
+     padding: 20px;
+}
 
-@media only screen and  (max-width: 544px) {
+.this-is-content-modal{
+     margin-top: 10px;
+     a {
+          text-decoration-line: none;
+     }
+}
+
+@media only screen and  (max-width: 560px) {
      .this-is-content-modal{
           p, span {
                font-size: 14px !important;

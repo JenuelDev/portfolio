@@ -60,4 +60,9 @@ export default {
           width: 100px;
           height: 130px !important;
      }
+     .blog-list-card{
+          display: inline-flex;
+          flex-wrap: wrap;
+          justify-content: center;
+     }
 </style>

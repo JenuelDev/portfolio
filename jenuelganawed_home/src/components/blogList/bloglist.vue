@@ -1,18 +1,10 @@
 <template>
      <div class="blog-list-show">
-          <!-- Post-->
-          <v-card class="post-module">
-               <!-- Thumbnail-->
+          <v-card class="post-module" elevation="0">
                <div class="thumbnail">
-                    <!-- <div class="date">
-                         <div class="date-day">27</div>
-                         <div class="date-month">Mar</div>
-                    </div> -->
                     <img :src="image"/>
                </div>
-               <!-- Post Content-->
-               <v-card class="post-content">
-                    <!-- <div class="category">Photos</div> -->
+               <v-card class="post-content" elevation="0">
                     <h1 class="title">{{title}}</h1>
                     <v-chip x-small v-for="label in labels" :key="label" style="margin: 3px;">
                          <v-icon small>{{sharpIcon}}</v-icon>
@@ -32,6 +24,7 @@
                                    v-bind="attrs"
                                    v-on="on"
                                    rounded
+                                   elevation="0"
                               >
                                    Read More
                               </v-btn>
@@ -40,38 +33,34 @@
                               <v-card-title>
                                    <span class="headline">{{ title }}</span>
                               </v-card-title>
-                              <v-card-text  class="modal-contents">
+                              <div  class="modal-contents">
+                                   
                                    <div >
-                                         <v-chip x-small v-for="label in labels" :key="label" style="margin: 3px;">
-                                             <v-icon small>{{sharpIcon}}</v-icon>
+                                         <v-chip v-for="label in labels" :key="label" style="margin: 3px;">
+                                             <v-icon>{{sharpIcon}}</v-icon>
                                              {{label}}
                                         </v-chip>
                                         <span class="comments" style="float:right;">
                                              <v-icon small>{{commentIcon}}</v-icon>
-                                             <!-- <a href="#"> 39 comments</a> -->
                                              {{ date }}
                                         </span>
                                    </div>
-                                   <div v-html="content" class="this-is-content-modal" style="margin-top: 20px;"></div>
-                              </v-card-text>
-                              <v-card-actions>
+                                   <div v-html="content" class="this-is-content-modal"></div>
+                              </div>
+                              <v-card-actions style="position: absolute; top: 0; right: 0;">
                                    <v-spacer></v-spacer>
                                    <v-btn
-                                   color="primary"
-                                   text
-                                   @click="dialog = false"
+                                        color="primary"
+                                        text
+                                        @click="dialog = false"
                                    >
-                                   Close
+                                        Close
                                    </v-btn>
                               </v-card-actions>
                               </v-card>
                          </v-dialog>
-                         <!-- <span class="timestamp">
-                              <i class="fa fa-clock-">o</i> 6 mins ago
-                         </span> -->
                          <span class="comments" style="float:right;">
                               <v-icon small>{{commentIcon}}</v-icon>
-                              <!-- <a href="#"> 39 comments</a> -->
                               {{ date }}
                          </span>
                     </div>
