@@ -4,7 +4,8 @@ import App from './App.vue';
 import router from './router';
 import vuetify from './plugins/vuetify';
 import VuePageTransition from 'vue-page-transition';
-Vue.use(VuePageTransition)
+
+Vue.use(VuePageTransition);
 Vue.config.productionTip = false;
 
 new Vue({

@@ -3,6 +3,7 @@ import BackButton from "./../../components/backButton/backButton.vue";
 import {getPOSTS} from './../../constants/request.js';
 import BlogItems from './components/blog-item/blogItem.vue';
 import { mdiBlogger } from '@mdi/js';
+import { alert } from '@//assets/data/blog.js';
 
 export default {
      components:{
@@ -13,7 +14,8 @@ export default {
      data() {
           return {
                blogItems: [],
-               blogIcon: mdiBlogger
+               blogIcon: mdiBlogger,
+               alertText: alert
           }
      },
      methods: {

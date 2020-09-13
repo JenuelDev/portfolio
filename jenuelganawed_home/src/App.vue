@@ -10,7 +10,6 @@
     </vue-page-transition>
   </v-app>
   </div>
-  
 </template>
 
 <script>

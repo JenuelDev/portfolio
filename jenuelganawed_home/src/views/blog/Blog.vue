@@ -9,7 +9,7 @@
                          prominent
                          class="alert-blog"
                     >
-                         Hi! This Blog posts Bellow Are Only Copied and Pasted for testing purposes, But you can actually read if you want. In the mean time, I will be editing This post. This posts are API generated from Blogger API provided by google Blogspot.com. You can check the original source of the api in my blogspot website. <a href="https://brojenuel.blogspot.com/" target="_blank">https://brojenuel.blogspot.com/</a>
+                         <div v-html="alertText"></div>
                     </v-alert>
                     <div v-if="blogItems.length == 0">
                          <v-skeleton-loader
