@@ -1,9 +1,14 @@
 <template>
-     <div class="backButton">
-          <v-btn rounded @click="hasHistory() 
-    ? $router.go(-1) 
-    : $router.push('/')">
-               <v-icon>{{mdiBackBurger}}</v-icon>
+     <div class="backButton" @click="hasHistory() 
+               ? $router.go(-1) 
+               : $router.push('/')">
+          <v-btn fab v-if="fab">
+               <v-icon>{{icon}}</v-icon>
+          </v-btn>
+          <v-btn v-else rounded @click="hasHistory() 
+               ? $router.go(-1) 
+               : $router.push('/')">
+               <v-icon>{{icon}}</v-icon>
                Home
           </v-btn>
      </div>
@@ -11,6 +16,11 @@
 <script>
 import { mdiBackburger } from "@mdi/js";
 export default {
+     props: {
+          text: { type: String, default: 'Home' },
+          icon: { type: String, default: mdiBackburger },
+          fab: { type: Boolean, default: false }
+     },
      data() {
           return {
                mdiBackBurger: mdiBackburger

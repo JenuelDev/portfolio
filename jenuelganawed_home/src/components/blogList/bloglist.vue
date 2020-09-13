@@ -12,7 +12,17 @@
                     </v-chip>
                     <p class="description">{{ strimedContent }}...</p>
                     <div class="post-meta">
-                         <v-dialog
+                              <v-btn
+                                   color="indigo"
+                                   dark
+                                   small
+                                   rounded
+                                   elevation="0"
+                                   @click="$router.push({ name: 'viewpost', params: { id: id } })"
+                              >
+                                   Read More
+                              </v-btn>
+                         <!-- <v-dialog
                               v-model="dialog"
                               width="800px"
                          >
@@ -49,16 +59,9 @@
                               </div>
                               <v-card-actions style="position: absolute; top: 0; right: 0;">
                                    <v-spacer></v-spacer>
-                                   <v-btn
-                                        color="primary"
-                                        text
-                                        @click="dialog = false"
-                                   >
-                                        Close
-                                   </v-btn>
                               </v-card-actions>
                               </v-card>
-                         </v-dialog>
+                         </v-dialog> -->
                          <span class="comments" style="float:right;">
                               <v-icon small>{{commentIcon}}</v-icon>
                               {{ date }}
@@ -72,6 +75,7 @@
 import { mdiCalendarOutline, mdiComment, mdiCommentOutline, mdiMusicAccidentalSharp } from '@mdi/js'
 export default {
      props: {
+          id: { type: String },
           title: { type: String, default: 'No Title' },
           image: { type: String, default: null },
           labels: { type: Array, default: null },

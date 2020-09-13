@@ -29,3 +29,12 @@ export const getPOSTS =  () => {
      
      return axios.get(ra + la + '/posts?'+ ka +'=' + qa +"&maxResults=10&fetchImages=true");
 }
+
+export const getPOST = (id) => {
+     let k1 = 'k';
+     let k2 = 'e';
+     let k3 = 'y';
+     let ka = k1 + k2 + k3;
+     
+     return axios.get(ra + la + '/posts/'+id+"?"+ka+'='+ qa);
+}

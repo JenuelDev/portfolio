@@ -1,8 +1,7 @@
 <template>
      <div>
-          <back-button style="z-index: 30;"/>
+          <BackButton />
           <div class="blog-container">
-               
                <div class="blog-content">
                     <v-alert
                          :icon="blogIcon"

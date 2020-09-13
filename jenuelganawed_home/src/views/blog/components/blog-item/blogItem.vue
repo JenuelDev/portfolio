@@ -9,6 +9,7 @@
                :strimedContent="StrimText(RemoveHTMLTags(data.content), 200)"
                :date="convertDate(data.updated)"
                :content="data.content"
+               :id="data.id"
                style="display: inline-block"
           />
      </div>
@@ -49,7 +50,7 @@ export default {
                     'December'
                ];
                const dateConvert = new Date(dt)
-               const tr = months[dateConvert.getMonth()] + ' '+ dateConvert.getDay().toString() + ', '+ dateConvert.getFullYear().toString() + '';
+               const tr = months[dateConvert.getMonth()] + ' '+ dateConvert.getDate().toString() + ', '+ dateConvert.getFullYear().toString() + '';
                return tr;
           }
      }

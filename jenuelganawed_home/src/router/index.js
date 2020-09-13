@@ -29,8 +29,19 @@ Vue.use(VueRouter)
   },
   {
     path: '/blog',
-    name: 'Blog',
-    component: () => import(/* webpackChunkName: "blog" */ './../views/blog/Blog.vue')
+    component: () => import(/* webpackChunkName: "bloghome" */ './../views/blog/BlogHome.vue'),
+    children: [
+      {
+        path: '',
+        name: 'Blog',
+        component: () => import(/* webpackChunkName: "blogitems" */ './../views/blog/pages/BlogHome/Blog.vue')
+      },
+      {
+        path: 'view/:id',
+        name: 'viewpost',
+        component: () => import(/* webpackChunkName: "viewpost" */ './../views/blog/pages/ViewPost/ViewPost.vue')
+      }
+    ]
   },
   {
     path: '*',
