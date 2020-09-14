@@ -1,6 +1,6 @@
 <template>
   <div class="long-card-container">
-    <v-card class="card">
+    <v-card class="card" elevation="0">
       <div class="con-img">
         <slot name="image"></slot>
         <!-- 

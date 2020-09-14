@@ -1,12 +1,13 @@
-import { mdiMapMarkerCircle, mdiGmail, mdiLink, mdiTwitter, mdiLinkedin, mdiGithub, mdiFileDownload, mdiYoutube, mdiDevTo } from '@mdi/js';
+import { mdiMapMarkerCircle, mdiGmail, mdiLinkedin, mdiGithub, mdiFileDownload, mdiYoutube, mdiDevTo } from '@mdi/js';
 import ProfileImage from './../profile.jpg';
 export const name = "Jenuel Ganawed";
 export const username = "Web Developer";
+export const subtitle = "And I am a Web Developer";
 export const address = "La Trinidad 2601";
 export const phone = "0950-3255-547";
 export const email = "Jenuel Oras Ganawed";
 export const about = "Hi! I live in La Trinidad, Benguet, Luzon, Philippines. I am a Web Developer. I eat rice and pay bills 👌😁👍😎";
-export const intro = "I'm a Web Developer offering enthusiasm and understanding of various programming languages. Looking to join an industry where the opportunity for growth and professional development is embraced.";
+export const intro = "...offering enthusiasm and understanding of various web tools. Looking to join an industry where the opportunity for growth and professional development is embraced.";
 export const profile_image = ProfileImage;
 export const links = [
      {
@@ -30,18 +31,6 @@ export const links = [
           icon_color: "red",
           tooltip: "Youtube"
      },
-     // {
-     //      icon: mdiLink,
-     //      text: "jenuelganawed.ml",
-     //      link: "http://jenuelganawed.ml",
-     //      icon_color: ""
-     // },
-     // {
-     //      icon: mdiTwitter,
-     //      text: "BroJenuel",
-     //      link: "https://twitter.com/BroJenuel",
-     //      icon_color: "#1DA1F2"
-     // },
      {
           icon: mdiLinkedin,
           text: "jenuelganawed",
@@ -56,13 +45,6 @@ export const links = [
           icon_color: "",
           tooltip: "GitHub"
      },
-     // {
-     //      icon: mdiDevTo,
-     //      text: "DevProfile",
-     //      link: "https://dev.to/misterj936",
-     //      icon_color: "#01579B",
-     //      tooltip: "Dev Profile"
-     // },
      {
           icon: mdiFileDownload,
           text: "Download My Resume",

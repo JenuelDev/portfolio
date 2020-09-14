@@ -1,19 +1,9 @@
-import { mdiWordpress, mdiDatabase, mdiLanguageHtml5, mdiAngularjs, mdiVuejs, mdiLanguageRubyOnRails, mdiLaravel, mdiBrain, mdiFire } from '@mdi/js'
+import { mdiLanguageHtml5, mdiAngularjs, mdiVuejs, mdiLanguageRubyOnRails, mdiLaravel, mdiBrain, mdiFire } from '@mdi/js'
 import { mdiSchoolOutline } from '@mdi/js';
 import { mdiHeadLightbulbOutline } from '@mdi/js';
-import { vue, angular, mysql, wordpress, ruby, laravel, php } from './colorCodes.js';
+import { vue, angular, ruby, laravel, php } from './colorCodes.js';
 
 export const skills = [
-     // {
-     //      text: "Wordpress",
-     //      color: wordpress,
-     //      icon: mdiWordpress
-     // },
-     // {
-     //      text: "MySQL",
-     //      color: mysql,
-     //      icon: mdiDatabase
-     // },
      {
           text: "HTML|CSS|JAVASCRIPT",
           color: "red darken-1",
@@ -53,7 +43,7 @@ export const skills = [
 ];
 
 export default {
-     onjective: "I'm a Web Developer offering enthusiasm and understanding of various programming languages. Looking to join an industry where the opportunity for growth and professional development is embraced which will inspire me to enhance my skills in Software Development and work with the team in a positive atmosphere, welcoming challenging projects and enjoying working with all sorts of personalities.",
+     onjective: "I'm a Web Developer offering enthusiasm and understanding of various web tools. Looking to join an industry where the opportunity for growth and professional development is embraced which will inspire me to enhance my skills in Software Development and work with the team in a positive atmosphere, I welcome challenging projects and enjoying working with all sorts of personalities.",
      overviews: [
           
           {

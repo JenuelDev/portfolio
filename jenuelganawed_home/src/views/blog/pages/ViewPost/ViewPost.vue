@@ -5,7 +5,7 @@
                <center v-if="!content">
                     <v-progress-circular
                     :size="100"
-                    :width="15"
+                    :width="5"
                     indeterminate
                     style="text-align:center;"
                     ></v-progress-circular>

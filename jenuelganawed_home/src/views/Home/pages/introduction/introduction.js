@@ -1,4 +1,4 @@
-import { profile_image, links, name, username, intro } from "./../../../../assets/data/profile_box.js";
+import { profile_image, links, name, intro, subtitle } from "./../../../../assets/data/profile_box.js";
 import { mdiFacebook } from "@mdi/js";
 
 export default {
@@ -7,7 +7,7 @@ export default {
           return {
                fname: name,
                image: profile_image,
-               username: username,
+               username: subtitle,
                intro: intro,
                icons: {
                     fb: mdiFacebook
