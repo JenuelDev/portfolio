@@ -66,4 +66,10 @@ export default {
           flex-wrap: wrap;
           justify-content: center;
      }
+     
+     @media only screen and  (max-width: 425px) {
+          .blog-list-card{
+               display: block;
+          }
+     }
 </style>

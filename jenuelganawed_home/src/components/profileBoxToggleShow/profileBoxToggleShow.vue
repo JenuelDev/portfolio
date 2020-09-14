@@ -100,7 +100,7 @@ export default {
 }
 .profile-box-show {
   position: fixed;
-  z-index: 20;
+  z-index: 100;
   height: 100vh;
   transition: 0.3s;
   overflow: auto;

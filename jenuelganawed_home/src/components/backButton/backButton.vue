@@ -1,5 +1,5 @@
 <template>
-     <div class="backButton" @click="hasHistory() 
+     <div class="backButton" style="z-index: 20;" @click="hasHistory() 
                ? $router.go(-1) 
                : $router.push('/')">
           <v-btn fab v-if="fab">
@@ -37,5 +37,11 @@ export default {
           position: fixed;
           margin-top: 20px;
           margin-left: 20px;
+     }
+     @media only screen and (max-width: 425px) {
+          .backButton {
+               margin-top: 10px;
+               margin-left: 10px;
+          }
      }
 </style>

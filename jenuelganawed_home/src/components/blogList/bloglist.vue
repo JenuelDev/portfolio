@@ -11,7 +11,8 @@
                          {{label}}
                     </v-chip>
                     <p class="description">{{ strimedContent }}...</p>
-                    <div class="post-meta">
+                    
+                    <div class="post-meta" style="margin-top: -7px;">
                               <v-btn
                                    color="indigo"
                                    dark
@@ -22,6 +23,10 @@
                               >
                                    Read More
                               </v-btn>
+                              <span class="comments" style="float: right; font-size: 12px;">
+                                   <v-icon small>{{commentIcon}}</v-icon>
+                                   {{ date }}
+                              </span>
                          <!-- <v-dialog
                               v-model="dialog"
                               width="800px"
@@ -62,10 +67,7 @@
                               </v-card-actions>
                               </v-card>
                          </v-dialog> -->
-                         <span class="comments" style="float:right;">
-                              <v-icon small>{{commentIcon}}</v-icon>
-                              {{ date }}
-                         </span>
+                         
                     </div>
                </v-card>
           </v-card>

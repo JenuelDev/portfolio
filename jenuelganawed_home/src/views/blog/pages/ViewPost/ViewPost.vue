@@ -1,6 +1,6 @@
 <template>
      <div class="blog-container">
-          <BackButton :fab="true" :icon="backIcon"/>
+          <BackButton :fab="true" :icon="backIcon" />
           <div class="blog-content">
                <center v-if="!content">
                     <v-progress-circular
@@ -14,7 +14,7 @@
                <v-card v-else class="view-content">
                     <h1>{{title}}</h1>
                     <div class="view-title">
-                         <v-chip x-small v-for="label in labels" :key="label" style="margin: 3px;">
+                         <v-chip v-for="label in labels" :key="label" style="margin: 3px;">
                               <v-icon small>{{sharpIcon}}</v-icon>
                               {{label}}
                          </v-chip>
