@@ -9,8 +9,9 @@ Vue.use(VueRouter)
     path: '/',
     component: Home,
     children: [
+      { path: '', redirect: '/introduction' },
       {
-        path: '',
+        path: 'introduction',
         name: 'Introduction',
         component: () => import(/* webpackChunkName: "introduction" */ './../views/Home/pages/introduction/introduction.vue')
       },
@@ -23,16 +24,16 @@ Vue.use(VueRouter)
         path: 'portfolio',
         name: 'Portfolio',
         component: () => import(/* webpackChunkName: "portfolio" */ './../views/Home/pages/Portfolio/Portfolio.vue')
-      },
-      
+      }
     ]
   },
   {
     path: '/blog',
     component: () => import(/* webpackChunkName: "bloghome" */ './../views/blog/BlogHome.vue'),
     children: [
+      { path: '', redirect: '/blog/bloghome' },
       {
-        path: '',
+        path: 'bloghome',
         name: 'Blog',
         component: () => import(/* webpackChunkName: "blogitems" */ './../views/blog/pages/BlogHome/Blog.vue')
       },

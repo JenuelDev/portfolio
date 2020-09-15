@@ -1,8 +1,9 @@
 <template>
-     <div class="backButton" style="z-index: 20;" @click="hasHistory() 
+     <div class="backButton" style="z-index: 20;" >
+          <v-btn fab v-if="fab" @click="hasHistory() 
                ? $router.go(-1) 
-               : $router.push('/')">
-          <v-btn fab v-if="fab">
+               : $router.push('/')"
+          >
                <v-icon>{{icon}}</v-icon>
           </v-btn>
           <v-btn v-else rounded @click="hasHistory() 
