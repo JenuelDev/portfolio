@@ -41,37 +41,41 @@
 
 @media only screen and (max-width: 560px){
      .alert-blog{
-          font-size: 12px;
+          font-size: 12px !important;
      }
      .blog-container{
           .blog-content{
                .view-content {
-                    padding: 10px;
+                    padding: 10px !important;
                     h1 {
-                         font-size: 25px;
+                         font-size: 25px !important;
                     }
                     .view-title{
                          span {
-                              font-size: 15px;
+                              font-size: 15px !important;
                          }
                     }
                     .jenuel-article {
                          p {
-                              font-size: 1rem;
+                              font-size: 1rem !important;
                               font-weight: 100 !important;
                               margin-bottom: 20px;
                          }
                          ul {
-                              font-size: 18px;
+                              font-size: 18px !important;
                          }
                          h2 {
-                              font-size: 20px;
+                              font-size: 20px !important;
                          }
                          h3 {
-                              font-size: 1.2rem;
+                              font-size: 1.2rem !important;
                          }
                     }
                }
           }
      }
+}
+
+@media only screen and (max-width: 320px){
+
 }

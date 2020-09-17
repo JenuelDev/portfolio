@@ -1,6 +1,5 @@
 .blog-list-show {
      .post-module {
-          font-size: 14px;
           position: relative;
           z-index: 1;
           display: block;
@@ -157,15 +156,6 @@
           }
           li {
                font-size: 13px !important;
-          }
-     }
-}
-
-@media only screen and  (max-width: 425px) {
-     .blog-list-show {
-          .post-module {
-               // max-width: 100%;
-               // min-width: 100%;
           }
      }
 }

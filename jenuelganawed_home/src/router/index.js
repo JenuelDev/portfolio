@@ -9,9 +9,8 @@ Vue.use(VueRouter)
     path: '/',
     component: Home,
     children: [
-      { path: '', redirect: '/introduction' },
       {
-        path: 'introduction',
+        path: '',
         name: 'Introduction',
         component: () => import(/* webpackChunkName: "introduction" */ './../views/Home/pages/introduction/introduction.vue')
       },
@@ -31,9 +30,8 @@ Vue.use(VueRouter)
     path: '/blog',
     component: () => import(/* webpackChunkName: "bloghome" */ './../views/blog/BlogHome.vue'),
     children: [
-      { path: '', redirect: '/blog/bloghome' },
       {
-        path: 'bloghome',
+        path: '',
         name: 'Blog',
         component: () => import(/* webpackChunkName: "blogitems" */ './../views/blog/pages/BlogHome/Blog.vue')
       },

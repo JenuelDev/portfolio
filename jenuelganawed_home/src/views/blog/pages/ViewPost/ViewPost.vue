@@ -26,8 +26,6 @@
           </div>
      </div>
 </template>
-<style lang="scss" src="./../BlogHome/index.scss">
-</style>
 <script>
 import { getPOST } from './../../../../constants/request.js';
 import  Chips from './../../../../components/chips/chips.vue';
