@@ -56,7 +56,6 @@ export default {
   .card {
     width: 100%;
     display: flex;
-    // border-radius: 10px;
     margin: 15px 0px 0px 0px;
     transition: all 0.25s ease;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
@@ -70,17 +69,14 @@ export default {
       align-items: center;
       justify-content: center;
       transition: all 0.35s ease-out;
-      // width: 200px;
-      // overflow: hidden;
     }
 
     .con-text {
       padding: 10px;
       opacity: 0.7;
       font-size: 15px;
-      // transition: 0.2s;
+      transition: 0.3s;
       .lang-used {
-        // float: right;
         .lang-color {
           height: 10px;
           width: 10px;
@@ -89,13 +85,11 @@ export default {
       }
       .con-content {
         margin-top: 10px;
-        // transition: 0.2s;
       }
     }
 
     img {
       height: 120px;
-      // width: 200px;
       opacity: 0.7;
       transition: 0.2s;
     }
@@ -109,14 +103,11 @@ export default {
       transition: 0.1s;
     }
     &:hover {
-      transform: translate(0, -9px);
       box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.438);
       .con-text {
+        transform: translate(0, -5px);
         padding: 10px;
         opacity: 1;
-        .con-content {
-          transition: 0.2s;
-        }
       }
       img {
         height: 120px;
@@ -157,6 +148,7 @@ export default {
       }
 
       .con-text {
+        transform: translate(0, 0px) !important;
         opacity: 1;
         h2 {
           font-size: 18px;
