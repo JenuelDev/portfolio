@@ -11,6 +11,12 @@ Vue.use(VueRouter)
     children: [
       {
         path: '',
+        redirect: {
+          name: 'Introduction'
+        }
+      },
+      {
+        path: 'introduction',
         name: 'Introduction',
         component: () => import(/* webpackChunkName: "introduction" */ './../views/Home/pages/introduction/introduction.vue')
       },
@@ -32,6 +38,12 @@ Vue.use(VueRouter)
     children: [
       {
         path: '',
+        redirect: {
+          name: 'Blog'
+        }
+      },
+      {
+        path: 'home',
         name: 'Blog',
         component: () => import(/* webpackChunkName: "blogitems" */ './../views/blog/pages/BlogHome/Blog.vue')
       },
@@ -50,6 +62,7 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes,
+  mode: 'history',
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
@@ -58,21 +71,5 @@ const router = new VueRouter({
     }
   }
 });
-
-// router.beforeResolve((to, from, next) => {
-//   // If this isn't an initial page load.
-//   if (to.name) {
-//       // Start the route progress bar.
-//       // NProgress.start()
-//       console.log('to: ' + to + " from: "+from);
-//   }
-//   next()
-// })
-
-// router.afterEach((to, from) => {
-//   // Complete the animation of the route progress bar.
-//   // NProgress.done()
-//   // console.log('Im done loading to: '+to + ' From: '+ from);
-// })
 
 export default router
