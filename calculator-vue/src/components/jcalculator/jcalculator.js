@@ -74,14 +74,16 @@ export default {
 
 
         equalButton() {
+            try {
+                let str = '';
+                this.solutionHandler.forEach(a => {
+                    str += String(a);
+                });
+                this.answer = eval(str);
+            } catch (e) {
+                this.answer = 'Syntax Error!'
+            }
             
-            console.log(this.solutionHandler)
-            let str = '';
-            this.solutionHandler.forEach(a => {
-                str += String(a);
-            });
-            // console.log(eval(str));
-            this.answer = eval(str);
         },
         clearButton() {
             this.solutionHandler[this.solutionHandler.length - 1] = String(this.solutionHandler[this.solutionHandler.length - 1]).slice(0, -1);
